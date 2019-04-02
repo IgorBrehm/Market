@@ -17,22 +17,6 @@ def init():
     except:
         return 3
 
-
-def insert(info):
-    """Insert formatted query into the database."""
-    if info['table'].lower() in ['ano', 'mes']:
-        query = 'insert into ' + info['table'] + ' values(' + ','.join(info['values']) + ');'
-    else:
-        query = 'insert into ' + info['table'] + ' values(null,' + ','.join(info['values']) + ');'
-
-    try:
-        DB.executescript(query)
-        DB.commit()
-        return 1
-    except sqlite3.IntegrityError:
-        return 2
-    except:
-        return 3
 		
 def insert(info):
     """Insert formatted query into the database."""
