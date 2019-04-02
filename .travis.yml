@@ -1,14 +1,12 @@
-﻿language: python
+language: python
 python:
   - "3.6"
-# command to install dependencies
 install:
   - pip install -r requirements.txt
 addons:
   sonarcloud:
-    organization: "igorbrehm-github" # the key of the org you chose at step #3
+    organization: igorbrehm-github
     token:
-      secure: 1ed0205aded2aa40fab0f456f25d89324545b8a7 # encrypted value of your token
+      secure: 1ed0205aded2aa40fab0f456f25d89324545b8a7
 script:
-  # other script steps might be done before running the actual analysis
   - sonar-scanner
