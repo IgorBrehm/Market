@@ -6,7 +6,7 @@ install:
   - pip install -r requirements.txt
 addons:
   sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    organization: "igorbrehm-github" # the key of the org you chose at step #3
     token:
       secure: 1ed0205aded2aa40fab0f456f25d89324545b8a7 # encrypted value of your token
 script:
